@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindCare AI Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="chat-container">
+
+    <!-- Header -->
+    <div class="chat-header">
+
+        <span>🧠 MindCare AI</span>
+
+        <div>
+
+            <button type="button" class="clear-btn" onclick="clearChat()">
+                Clear
+            </button>
+
+            <button type="button" id="themeBtn" onclick="toggleTheme()">
+                🌙
+            </button>
+
+            <button type="button" class="clear-btn" onclick="downloadChat()">
+                📄 Export
+            </button>
+
+        </div>
+
+    </div>
+
+  <!-- Profile -->
+
+<div class="profile-card">
+
+    <img src="images/mimi.png" class="profile-img" alt="Mimi">
+
+    <div class="profile-info">
+
+        <h3 id="userName">Welcome</h3>
+
+        <p class="status">🟢 Online</p>
+
+    </div>
+
+    
+
+</div>
+    
+
+    <!-- Chat -->
+    <div class="chat-box" id="chatBox">
+
+        <div class="bot-message">
+
+            👋 Hello! I'm <b>Mimi</b>.
+
+            <br><br>
+
+            How are you feeling today? 💜
+
+        </div>
+
+    </div>
+
+    <!-- Emoji Picker -->
+    <div class="emoji-box" id="emojiBox">
+
+        <span>😀</span>
+        <span>😊</span>
+        <span>😍</span>
+        <span>🥺</span>
+        <span>😭</span>
+        <span>😡</span>
+        <span>❤️</span>
+        <span>🌸</span>
+        <span>👍</span>
+        <span>🎉</span>
+
+    </div>
+
+    <!-- Quick Replies -->
+    <div class="quick-replies">
+
+        <button onclick="quickReply('I am happy')">😊 Happy</button>
+
+        <button onclick="quickReply('I am sad')">😢 Sad</button>
+
+        <button onclick="quickReply('I am stressed')">😰 Stress</button>
+
+        <button onclick="quickReply('I am angry')">😡 Angry</button>
+
+        
+
+    </div>
+
+    <!-- Chat Input -->
+    <div class="chat-input">
+
+        <button type="button" id="emojiBtn">
+            😊
+        </button>
+
+        <button type="button" id="voiceBtn">
+            🎤
+        </button>
+        
+       
+
+        <input
+            type="text"
+            id="messageInput"
+            placeholder="Type your message...">
+
+        <button type="button" id="sendBtn" onclick="sendMessage()">
+            Send
+        </button>
+
+    </div>
+
+    <!-- Daily Motivation -->
+    <details class="quote-card">
+
+        <summary>💜 Daily Motivation</summary>
+
+        <p id="dailyQuote">
+            You matter. Keep going one step at a time.
+        </p>
+
+    </details>
+
+   
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

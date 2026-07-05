@@ -1,0 +1,591 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+/* ==========================
+   BODY
+========================== */
+
+body{
+    background:linear-gradient(135deg,#FFE4EC,#F3E8FF);
+    min-height:100vh;
+}
+
+/* ==========================
+   HERO
+========================== */
+
+.hero{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.content{
+    width:700px;
+    max-width:90%;
+}
+
+.hero-img{
+    width:150px;
+    height:150px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid #EC4899;
+    margin-bottom:20px;
+}
+
+h1{
+    font-size:55px;
+    color:#9333EA;
+    margin-bottom:15px;
+}
+
+h2{
+    color:#444;
+    margin-bottom:20px;
+}
+
+p{
+    color:#666;
+    font-size:18px;
+    line-height:1.7;
+    margin-bottom:35px;
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+button{
+    border:none;
+    outline:none;
+    cursor:pointer;
+    transition:0.3s ease;
+}
+
+/* Hero & Login Buttons */
+
+.hero button,
+.login-box button{
+    background:#EC4899;
+    color:#fff;
+    padding:14px 35px;
+    border-radius:10px;
+    font-size:17px;
+}
+
+.hero button:hover,
+.login-box button:hover{
+    background:#DB2777;
+    transform:scale(1.05);
+}
+
+/* ==========================
+   LOGIN
+========================== */
+
+.login-container{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.login-box{
+    width:380px;
+    max-width:90%;
+    background:#fff;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(236,72,153,.20);
+}
+
+.login-img{
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    border-radius:50%;
+    border:4px solid #EC4899;
+    margin-bottom:20px;
+}
+
+.login-box input{
+    width:100%;
+    padding:14px;
+    margin:20px 0;
+    border:2px solid #EC4899;
+    border-radius:10px;
+    outline:none;
+    font-size:16px;
+}
+
+.login-box button{
+    width:100%;
+}
+
+/* ==========================
+   CHAT PAGE
+========================== */
+
+.chat-container{
+    width:430px;
+    height:700px;
+    margin:20px auto;
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+/* ==========================
+   HEADER
+========================== */
+
+.chat-header{
+    background:#d94c9c;
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 14px;
+    height:66px;
+}
+
+.chat-header span{
+    font-size:18px;
+    font-weight:600;
+}
+
+.chat-header button{
+    padding:8px 12px;
+    font-size:15px;
+    border-radius:20px;
+    background:#fff;
+    color:#d94c9c;
+}
+
+/* ==========================
+   PROFILE
+========================== */
+
+.profile-card{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:10px 15px;
+    background:#FFF0F8;
+    border-bottom:1px solid #eee;
+}
+
+.profile-img{
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    border:3px solid #EC4899;
+    object-fit:cover;
+    flex-shrink:0;
+}
+
+.profile-info{
+    flex:1;
+}
+
+#userName{
+    margin:0;
+    font-size:18px;
+    font-weight:600;
+    color:#111;
+}
+
+.status{
+    margin-top:3px;
+    font-size:13px;
+    color:#16a34a;
+}
+
+/* ==========================
+   CHAT BOX
+========================== */
+
+.chat-box{
+    flex:1;
+    overflow-y:auto;
+    padding:15px;
+    background:#FFF8FC;
+    display:flex;
+    flex-direction:column;
+}
+
+/* ==========================
+   BOT MESSAGE
+========================== */
+
+.bot-message{
+    background:#F3E8FF;
+    color:#333;
+    padding:12px 15px;
+    border-radius:16px;
+    border-top-left-radius:5px;
+    max-width:75%;
+    margin-bottom:15px;
+    line-height:1.6;
+    word-break:break-word;
+    align-self:flex-start;
+}
+
+/* ==========================
+   USER MESSAGE
+========================== */
+
+.user-message{
+    background:#EC4899;
+    color:#fff;
+    padding:12px 15px;
+    border-radius:16px;
+    border-top-right-radius:5px;
+    max-width:75%;
+    margin-bottom:15px;
+    margin-left:auto;
+    line-height:1.6;
+    word-break:break-word;
+    align-self:flex-end;
+}
+
+.user-message p,
+.bot-message p{
+    margin:0;
+}
+
+.user-message small{
+    display:block;
+    margin-top:5px;
+    text-align:right;
+    font-size:11px;
+    color:#FFE8F5;
+}
+
+.bot-message small{
+    display:block;
+    margin-top:5px;
+    font-size:11px;
+    color:#777;
+}
+/* ==========================
+   CHAT INPUT
+========================== */
+
+.chat-input{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:10px;
+    background:#fff;
+    border-top:1px solid #eee;
+}
+
+/* Emoji & Voice */
+
+#emojiBtn,
+#voiceBtn{
+    width:46px;
+    height:46px;
+    flex:0 0 46px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:0;
+    border:none;
+    border-radius:50%;
+
+    background:#FFE4EC;
+    color:#333;
+    font-size:22px;
+    cursor:pointer;
+}
+
+#emojiBtn:hover,
+#voiceBtn:hover{
+    background:#FFD6E8;
+}
+
+/* Message Input */
+
+#messageInput{
+    flex:1;
+    min-width:0;
+    height:46px;
+
+    padding:0 16px;
+
+    border:2px solid #EC4899;
+    border-radius:25px;
+
+    outline:none;
+
+    font-size:15px;
+}
+
+/* Send Button */
+
+#sendBtn{
+    width:88px;
+    height:46px;
+    flex:0 0 88px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border:none;
+    border-radius:25px;
+
+    background:#EC4899;
+    color:#fff;
+
+    font-size:16px;
+    font-weight:bold;
+
+    cursor:pointer;
+}
+
+#sendBtn:hover{
+    background:#DB2777;
+}
+
+/* ==========================
+   EMOJI BOX
+========================== */
+
+.emoji-box{
+    display:none;
+    padding:10px;
+    background:#fff;
+    border-top:1px solid #eee;
+
+    max-height:120px;
+    overflow-y:auto;
+}
+
+.emoji-box span{
+    display:inline-block;
+    font-size:24px;
+    margin:6px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.emoji-box span:hover{
+    transform:scale(1.25);
+}
+
+/* ==========================
+   QUICK REPLIES
+========================== */
+
+.quick-replies{
+    display:flex;
+    align-items:center;
+
+    gap:8px;
+
+    padding:10px;
+
+    overflow-x:auto;
+    white-space:nowrap;
+
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+}
+
+.quick-replies::-webkit-scrollbar{
+    display:none;
+}
+
+.quick-replies button{
+    flex:0 0 auto;
+
+    min-width:95px;
+    height:38px;
+
+    padding:0 16px;
+
+    border:none;
+    border-radius:20px;
+
+    background:#FFE4EC;
+    color:#EC4899;
+
+    font-size:14px;
+    font-weight:500;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    cursor:pointer;
+}
+
+.quick-replies button:hover{
+    background:#FFD4E5;
+}
+
+/* ==========================
+   DAILY MOTIVATION
+========================== */
+
+.quote-card{
+    margin:10px;
+    padding:12px;
+
+    background:#FFF5FA;
+
+    border-left:4px solid #EC4899;
+    border-radius:10px;
+}
+
+.quote-card summary{
+    cursor:pointer;
+
+    list-style:none;
+
+    font-size:15px;
+    font-weight:bold;
+
+    color:#EC4899;
+}
+
+.quote-card summary::-webkit-details-marker{
+    display:none;
+}
+
+.quote-card p{
+    margin-top:10px;
+
+    font-size:14px;
+    line-height:1.6;
+
+    color:#555;
+    font-style:italic;
+}
+
+/* ==========================
+   TYPING ANIMATION
+========================== */
+
+.typing{
+    color:#777;
+    font-style:italic;
+}
+
+.dots::after{
+    content:"";
+    animation:dots 1.5s infinite;
+}
+
+@keyframes dots{
+    0%{content:"";}
+    25%{content:".";}
+    50%{content:"..";}
+    75%{content:"...";}
+    100%{content:"";}
+}
+
+/* ==========================
+   DARK MODE
+========================== */
+
+.dark-mode{
+    background:#181818;
+}
+
+.dark-mode .chat-container{
+    background:#2B2B2B;
+}
+
+.dark-mode .chat-header{
+    background:#1F1F1F;
+}
+
+.dark-mode .profile-card{
+    background:#333;
+    border-bottom:1px solid #444;
+}
+
+.dark-mode #userName{
+    color:#fff;
+}
+
+.dark-mode .status{
+    color:#53d769;
+}
+
+.dark-mode .chat-box{
+    background:#222;
+}
+
+.dark-mode .bot-message{
+    background:#444;
+    color:#fff;
+}
+
+.dark-mode .user-message{
+    background:#EC4899;
+    color:#fff;
+}
+
+.dark-mode .emoji-box{
+    background:#2B2B2B;
+}
+
+.dark-mode .chat-input{
+    background:#2B2B2B;
+    border-top:1px solid #444;
+}
+
+.dark-mode #messageInput{
+    background:#444;
+    color:#fff;
+    border:2px solid #666;
+}
+
+.dark-mode .quick-replies{
+    background:#2B2B2B;
+}
+
+.dark-mode .quick-replies button{
+    background:#444;
+    color:#fff;
+}
+
+.dark-mode .quick-replies button:hover{
+    background:#EC4899;
+}
+
+.dark-mode .quote-card{
+    background:#333;
+}
+
+.dark-mode .quote-card p{
+    color:#ddd;
+}
+
+.dark-mode .history-card{
+    background:#333;
+}
+
+.dark-mode #historyList li{
+    background:#444;
+    color:#fff;
+}
